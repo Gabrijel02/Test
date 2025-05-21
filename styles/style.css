@@ -1,0 +1,670 @@
+/* ALL PAGES */
+body {
+    margin: 0;
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    color: #575759;
+    scroll-behavior: smooth;
+}
+
+/* PAGE LOAD ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----- MAIN PAGE ----- */
+
+/* BLOCK - TOTAL CONTENT */
+.TotalniSadrzaj {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, auto);
+    margin: auto;
+    padding: 20px;
+    background-color: #f1ecec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* HEADER */
+.Zaglavlje {
+    display: flex;
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #cc2328;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.Zaglavlje h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* NAVIGATION */
+.Navigacija {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: 1 / 5;
+    grid-row: 3;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #f1ecec;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Navigacija a {
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #575759;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.Navigacija a:hover {
+    color: #cc2328;
+}
+
+/* PERSONAL INFORMATION */
+.OsobniPodatci {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    grid-column: 1;
+    grid-row: 4 / 7;
+    background-color: #ffffff;
+    border: 2px solid #f1ecec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.OsobniPodatciSlika {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.OsobniPodatciSlika img {
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.OsobniPodatciSlika img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-out;
+}
+
+.OsobniPodatciTekst {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.OsobniPodatciTekst p {
+    padding-left: 15%;
+    font-size: 1rem;
+    line-height: 0.5;
+}
+
+.naglasi {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* SHORT BIOGRAPHY */
+.KratkiZivotopis {
+    grid-column: 2 / 5;
+    grid-row: 4 / 7;
+    padding: 20px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 2px solid #f1ecec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+.KratkiZivotopis p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* IMAGE GALLERY */
+.GalerijaSlika {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    gap: 25px;
+    grid-column: 1 / 5;
+    grid-row: 7 / 11;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #f1ecec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.GalerijaSlika img {
+    width: calc(25% - 12.5px);
+    height: auto;
+    transition: transform 0.5s ease-out;
+}
+
+.GalerijaSlika img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    grid-column: 1 / 5;
+    grid-row: 11;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    background-color: #cc2328;
+    border-radius: 0 0 15px 15px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:last-child {
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ----- LOGIN AND REGISTRATION PAGE ----- */
+
+/* BLOCK - TOTAL CONTENT FORM */
+.TotalniSadrzajForma {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, auto);
+    margin: auto;
+    padding: 20px;
+    height: 94vh;
+    background-color: #f1ecec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER FORM */
+.ZaglavljeForma {
+    display: flex;
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #cc2328;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.ZaglavljeForma h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* LOGIN FORM */
+.LoginForma {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 4;
+    grid-row: 4 / 7;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #f1ecec;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.FormaButtonLink {
+    text-decoration: none;
+    color: white;
+}
+
+.FormaLink {
+    text-decoration: none;
+    text-align: center;
+    color: #575759;
+}
+
+.FormaLink:hover {
+    color: #cc2328;
+    font-weight: bold;
+}
+
+.Forma {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.Forma label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #575759;
+}
+
+.Forma input {
+    font-size: 1rem;
+    padding: 10px;
+    border: 2px solid #f1ecec;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Forma button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    background-color: #cc2328;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Forma button:hover {
+    background-color: #a51d22;
+}
+
+
+
+/* ----- MEDIA QUERY FOR SMALL MOBILE PHONES ----- */
+@media (max-width: 430px) {
+
+    /* BLOCK - TOTAL CONTENT - mediaQuery SMALL MOBILE PHONES */
+    .TotalniSadrzaj {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 10px;
+    }
+
+    /* HEADER - mediaQuery SMALL MOBILE PHONES */
+    .Zaglavlje {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        padding: 20px;
+    }
+
+    .Zaglavlje h1 {
+        font-size: 0.6rem;
+    }
+
+    /* NAVIGATION- mediaQuery SMALL MOBILE PHONES */
+    .Navigacija {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .Navigacija a {
+        font-size: 0.6rem;
+    }
+
+    .Navigacija a:hover {
+        display: none;
+    }
+
+    /* PERSONAL INFORMATION- mediaQuery SMALL MOBILE PHONES */
+    .OsobniPodatci {
+        grid-row: 5 / 6;
+    }
+
+    .OsobniPodatciTekst p {
+        font-size: 0.6rem;
+    }
+
+    /* SHORT BIOGRAPHY- mediaQuery SMALL MOBILE PHONES */
+    .KratkiZivotopis {
+        grid-column: 1;
+        grid-row: 6 / 10;
+    }
+
+    /* IMAGE GALLERY- mediaQuery SMALL MOBILE PHONES */
+    .GalerijaSlika {
+        grid-column: 1;
+        grid-row: 10 / 13;
+        padding: 20px;
+    }
+
+    .GalerijaSlika img {
+        width: calc(100% - 12.5px);
+    }
+
+    /* FOOTER - mediaQuery SMALL MOBILE PHONES */
+    footer {
+        grid-column: 1;
+        grid-row: 13;
+        padding: 10px;
+    }
+
+    /* ----- LOGIN AND REGISTRATION PAGE ----- */
+
+    /* BLOCK - TOTAL CONTENT FORM - mediaQuery SMALL MOBILE PHONES */
+    .TotalniSadrzajForma {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* HEADER FORM - mediaQuery SMALL MOBILE PHONES */
+    .ZaglavljeForma {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* LOGIN FORM - mediaQuery SMALL MOBILE PHONES */
+    .LoginForma {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+}
+
+/* ----- MEDIA QUERY FOR LARGE MOBILE PHONES ----- */
+@media (min-width: 430px) and (max-width: 768px) {
+
+    /* BLOCK - TOTAL CONTENT - mediaQuery LARGE MOBILE PHONES */
+    .TotalniSadrzaj {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 10px;
+    }
+
+    /* HEADER - mediaQuery LARGE MOBILE PHONES */
+    .Zaglavlje {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        padding: 20px;
+    }
+
+    .Zaglavlje h1 {
+        font-size: 0.6rem;
+    }
+
+    /* NAVIGATION - mediaQuery LARGE MOBILE PHONES */
+    .Navigacija {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .Navigacija a {
+        font-size: 0.6rem;
+    }
+
+    .Navigacija a:hover {
+        display: none;
+    }
+
+    /* PERSONAL INFORMATION - mediaQuery LARGE MOBILE PHONES */
+    .OsobniPodatci {
+        grid-row: 5 / 6;
+    }
+
+    .OsobniPodatciTekst p {
+        font-size: 0.6rem;
+    }
+
+    /* SHORT BIOGRAPHY - mediaQuery LARGE MOBILE PHONES */
+    .KratkiZivotopis {
+        grid-column: 1;
+        grid-row: 6 / 10;
+    }
+
+    /* IMAGE GALLERY - mediaQuery LARGE MOBILE PHONES */
+    .GalerijaSlika {
+        grid-column: 1;
+        grid-row: 10 / 13;
+    }
+
+    .GalerijaSlika img {
+        width: calc(100% - 12.5px);
+    }
+
+    /* FOOTER - mediaQuery LARGE MOBILE PHONES */
+    footer {
+        grid-column: 1;
+        grid-row: 13;
+    }
+
+    /* ----- LOGIN AND REGISTRATION PAGE ----- */
+
+    /* BLOCK - TOTAL CONTENT FORM - mediaQuery LARGE MOBILE PHONES */
+    .TotalniSadrzajForma {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* HEADER FORM - mediaQuery LARGE MOBILE PHONES */
+    .ZaglavljeForma {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* LOGIN FORM - mediaQuery LARGE MOBILE PHONES */
+    .LoginForma {
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+}
+
+/* ----- MEDIA QUERY FOR SMALL TABLETS ----- */
+@media (min-width: 768px) and (max-width: 932px) {
+
+    /* BLOCK - TOTAL CONTENT - mediaQuery SMALL TABLETS */
+    .TotalniSadrzaj {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 10px;
+    }
+
+    /* HEADER - mediaQuery SMALL TABLETS */
+    .Zaglavlje {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        padding: 20px;
+    }
+
+    .Zaglavlje h1 {
+        font-size: 1rem;
+    }
+
+    /* NAVIGATION- mediaQuery SMALL TABLETS */
+    .Navigacija {
+        justify-content: space-around;
+        align-items: center;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .Navigacija a {
+        font-size: 0.7rem;
+    }
+
+    .Navigacija a:hover {
+        display: none;
+    }
+
+    /* PERSONAL INFORMATION- mediaQuery SMALL TABLETS */
+    .OsobniPodatci {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        grid-row: 5 / 6;
+    }
+
+    .OsobniPodatciSlika {
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    .OsobniPodatciTekst {
+        width: 50%;
+    }
+
+    .OsobniPodatciTekst p {
+        font-size: 0.7rem;
+    }
+
+    /* SHORT BIOGRAPHY- mediaQuery SMALL TABLETS */
+    .KratkiZivotopis {
+        grid-column: 1;
+        grid-row: 6 / 10;
+    }
+
+    /* IMAGE GALLERY- mediaQuery SMALL TABLETS */
+    .GalerijaSlika {
+        grid-column: 1;
+        grid-row: 10 / 13;
+    }
+
+    .GalerijaSlika img {
+        width: calc(100% - 12.5px);
+    }
+
+    /* FOOTER- mediaQuery SMALL TABLETS */
+    footer {
+        grid-column: 1;
+        grid-row: 13;
+    }
+}
+
+
+/* ----- MEDIA QUERY FOR LARGE TABLETS ----- */
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+    /* BLOCK - TOTAL CONTENT - mediaQuery LARGE TABLETS */
+    .TotalniSadrzaj {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 10px;
+    }
+
+    /* HEADER - mediaQuery LARGE TABLETS */
+    .Zaglavlje {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        padding: 20px;
+    }
+
+    .Zaglavlje h1 {
+        font-size: 1rem;
+    }
+
+    /* NAVIGATION - mediaQuery LARGE TABLETS */
+    .Navigacija {
+        justify-content: space-around;
+        align-items: center;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .Navigacija a {
+        font-size: 0.7rem;
+    }
+
+    .Navigacija a:hover {
+        display: none;
+    }
+
+    /* PERSONAL INFORMATION - mediaQuery LARGE TABLETS */
+    .OsobniPodatci {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        grid-row: 5 / 6;
+    }
+
+    .OsobniPodatciSlika {
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    .OsobniPodatciTekst {
+        width: 50%;
+    }
+
+    .OsobniPodatciTekst p {
+        font-size: 0.7rem;
+    }
+
+    /* SHORT BIOGRAPHY - mediaQuery LARGE TABLETS */
+    .KratkiZivotopis {
+        grid-column: 1;
+        grid-row: 6 / 10;
+    }
+
+    /* IMAGE GALLERY - mediaQuery LARGE TABLETS */
+    .GalerijaSlika {
+        grid-column: 1;
+        grid-row: 10 / 13;
+    }
+
+    .GalerijaSlika img {
+        width: calc(100% - 12.5px);
+    }
+
+    /* FOOTER - mediaQuery LARGE TABLETS */
+    footer {
+        grid-column: 1;
+        grid-row: 13;
+    }
+}
+
+/* ----- MEDIA QUERY FOR SMALL LAPTOPS ----- */
+@media (min-width: 1366px) and (max-width: 1600px) {
+
+    /* PERSONAL INFORMATION - mediaQuery SMALL LAPTOP */
+    .OsobniPodatciTekst p {
+        font-size: 0.7rem;
+    }
+
+    .naglasi {
+        font-size: 0.7rem;
+    }
+}
